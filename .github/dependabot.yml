@@ -1,0 +1,16 @@
+version: 2
+registries:
+  hex-organization-expert360:
+    type: hex-organization
+    organization: expert360
+    key: "${{secrets.HEX_ORGANIZATION_EXPERT360_KEY}}"
+
+updates:
+- package-ecosystem: mix
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "19:00"
+  open-pull-requests-limit: 10
+  registries:
+  - hex-organization-expert360
